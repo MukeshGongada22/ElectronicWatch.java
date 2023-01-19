@@ -15,7 +15,22 @@ public class ElectronicWatch {
         if(hours>24){
             hours=hours%24;
         }
-        System.out.println(hours +":"+ min +":" +sec);
+        if(min<10 || sec<10){
+
+            if(min<10 && sec<10){
+                System.out.println(hours +":0"+min +":0"+sec);
+            }
+            else if(min<10){
+                System.out.println(hours +":0"+min+":"+sec);
+            }
+            else if(sec<10){
+                System.out.println(hours +":"+min +":0"+sec);
+            }
+        }
+
+        else{
+            System.out.println(hours +":"+ min +":" +sec);
+        }
 
     }
 }
